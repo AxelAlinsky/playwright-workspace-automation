@@ -1,0 +1,6 @@
+{
+    "sauceDemo": {
+        "loginURL": "https://www.saucedemo.com/",
+        "homeUrl": "https://www.saucedemo.com/inventory.html"
+    }
+}

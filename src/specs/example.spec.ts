@@ -1,5 +1,6 @@
-import { expect, beforeEach, describe } from '@playwright/test'; // Import from @playwright/test
+import { expect, beforeEach, describe } from '@playwright/test';
 import Accounts from '../data/accounts.json';
+import Url from '../data/urls.json';
 import SuiteContext from '@playwright/test';
 import { test } from '../resources/fixture'; 
 
@@ -9,12 +10,15 @@ import { test } from '../resources/fixture';
 test.describe('User Authentication', () => {
   test.beforeEach(async ({ page }) => {
     // Navigate to the login page before each test
-    await page.goto('https://www.saucedemo.com/');
+    await page.goto(Url.sauceDemo.loginURL);
   });
+
+  test.afterEach(async ({ page }) => {
+    await 
+  }
 
   test('Valid Login Test', async ({ page, loginPage }) => {
     await loginPage.login(Accounts.standard_user.username, Accounts.standard_user.password);
-    
   });
 
 
